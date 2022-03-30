@@ -55,9 +55,9 @@ def send_lyrics():  # отправка рандомной строчки из п
 
 # Функции, которые запускаются по времени: поиск песен на genius и отправка рандомной строчки из песни
 def scheduled_funcs():
-    # schedule.every(3).week.do(init)
-    schedule.every().day.at('18:27').do(send_lyrics)
-    schedule.every().day.at('19:06').do(init)
+    schedule.every(3).week.do(init)
+    schedule.every().day.at('10:10').do(send_lyrics)
+    # schedule.every().day.at('19:06').do(init)
 
     while True:
         schedule.run_pending()
